@@ -1,17 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-This script help you to create new project set.
-What this script can do is:
- 1. creating project directory and default html template.
- 2. adding new configurations to your hosts file.
- 3. adding new configurations to your .htaccess file.
 
-Run the following command and confirm that it reports
-no warnings:
-
-    $ python ./run.py
-
-"""
 import os
 import os.path
 import datetime
