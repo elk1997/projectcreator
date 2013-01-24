@@ -26,16 +26,37 @@ e.g. You put in the directory named **mobile** to `default` directory. Command l
 ## Usage
 Run the following command.
 
-	python ./run.py
+	$ python ./run.py
+
+## Example
+	$ python ./run.py
+	Enter your domain name. (e.g. dev.test.com) [] dev.test.com
+	Enter the project path following '/virtual/www/'. (e.g. test) [] test
+	Enter document root directory following '/virtual/www/test/'. [public]
+	Choose a template from 'bootstrap/plain'. [] bootstrap
+
+	---------------------------
+	Domain: dev.test.com
+	Project Path: /virtual/www/test
+	Document Root: /virtual/www/test/public
+	htaccess: /etc/apache2/extra/httpd-vhosts.conf
+	Template: bootstrap
+	---------------------------
+
+	Are you sure these configurations are all correct?(Y/n) [n] Y
+	Password: (Enter your root password)
+	Your project successfully generated.
+
+The generated project will be like <http://blog.elkc.net/projectcreator/>.
 
 ## Notes
 - It may be working on Linux.
 
 ## Todo
--  Woring for Nginx.
--  Creating also project files for Sublime Text 2, Eclipse, and so on.
+-  Work for Nginx.
+-  Create also project files for Sublime Text 2, Eclipse, and so on.
 
 ## Author
- * Created by [Takashi Aoki](http://elkc.net).
+ * Created by [Takashi Aoki](http://blog.elkc.net).
  * Email address: <aoki@elkc.net>
  * [@elk1997](https://twitter.com/elk1997) on Twitter.
