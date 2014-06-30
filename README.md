@@ -28,14 +28,19 @@ Run the following command.
 
 	python ./run.py
 
+### Option
+If you want to skip configuration steps, here is a option. Domain, Project Path, Document Root and Template are automatically generated.
+
+    python ./run.py --mode=auto
+
 ## Notes
 - It may be working on Linux.
 
 ## Todo
--  Woring for Nginx.
+-  Working for Nginx.
 -  Creating also project files for Sublime Text 2, Eclipse, and so on.
 
 ## Author
- * Created by [Takashi Aoki](http://elkc.net).
+ * Created by [Takashi Aoki](http://blog.elkc.net).
  * Email address: <aoki@elkc.net>
  * [@elk1997](https://twitter.com/elk1997) on Twitter.
