@@ -7,7 +7,7 @@ import shutil
 import pwd
 import re
 import sys
-
+from optparse import OptionParser
 from config import CONFIG
 
 hosts = CONFIG['hosts']
@@ -35,11 +35,26 @@ class Project():
 			exit()
 
 	def run(self):
-		self.waitInputDomain()
-		self.waitInputPath()
-		self.waitInputDocumentRoot()
-		self.waitInputTemplate()
+		parser = OptionParser()
+		parser.add_option('--mode', dest='mode')
+
+		options, args = parser.parse_args()
+		if options.mode == "auto":
+			self.generateSubdomain()
+		else:
+			self.waitInputDomain()
+			self.waitInputPath()
+			self.waitInputDocumentRoot()
+			self.waitInputTemplate()
+
 		self.execute()
+
+	def generateSubdomain(self):
+		d = datetime.datetime.today()
+		self.domain = d.strftime("%Y%m%d%H%M%S") + ".localhost"
+		self.path = self.domain
+		self.documentRoot = "public"
+		self.template = "plain"
 
 	def waitInputDomain(self):
 		input = raw_input("Enter your domain name. (e.g. dev.test.com) [] ")
